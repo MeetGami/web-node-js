@@ -1,5 +1,5 @@
 // // Import necessary modules
-// const express = require('express');
+const express = require('express');
 // const path = require('path');
 // const bodyParser = require('body-parser');
 // const { Pool } = require('pg');
@@ -135,10 +135,10 @@
 // });
 
 
-const express = require('express');
+//const express = require('express');
 const path = require('path');
 const app = express();
-app.use(express.static('public')); // Serve static files from 'public' directory
+//app.use(express.static('public')); // Serve static files from 'public' directory
 app.use('/',require(path.join(__dirname, 'routes/user.js')))
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
